@@ -1,0 +1,19 @@
+name = "hmac_tests"
+description = "Test suite for HMAC"
+version = "0.0.0"
+
+authors = ["Anton Fediushin"]
+maintainers = ["Anton Fediushin <imantonmeep@gmail.com>"]
+maintainers-logins = ["AntonMeep"]
+
+executables = ["hmac_tests"]
+
+[configuration]
+disabled = true
+
+[[depends-on]]
+aunit = "^22.0.0"
+hmac = "*"
+
+[[pins]]
+hmac = { path = "../" }
