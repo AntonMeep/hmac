@@ -11,3 +11,8 @@ maintainers-logins = ["AntonMeep"]
 
 [[depends-on]]
 sha1 = "^1.0.0"
+sha2 = "^1.1.0"
+
+[[pins]]
+sha1 = {path = "../sha1"}
+sha2 = {path = "../sha2"}

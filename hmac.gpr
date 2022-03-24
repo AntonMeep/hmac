@@ -1,6 +1,7 @@
 with "config/hmac_config.gpr";
 
 with "sha1.gpr";
+with "sha2.gpr";
 
 project HMAC is
 
