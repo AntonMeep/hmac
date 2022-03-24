@@ -4,7 +4,7 @@ with AUnit.Assertions; use AUnit.Assertions;
 with AUnit.Test_Caller;
 
 with Ada.Streams; use Ada.Streams;
-with HMAC;        use HMAC.HMAC_SHA1;
+with HMAC;        use HMAC.HMAC_SHA_1;
 
 package body HMAC_SHA1_Streams_Tests is
    package Caller is new AUnit.Test_Caller (Fixture);
@@ -23,7 +23,7 @@ package body HMAC_SHA1_Streams_Tests is
 
    procedure HMAC_SHA1_RFC2202_Test (Object : in out Fixture) is
       function HMAC (Key, Message : String) return Stream_Element_Array renames
-        HMAC.HMAC_SHA1.HMAC;
+        HMAC.HMAC_SHA_1.HMAC;
    begin
       declare
          Ctx : Context :=

@@ -3,6 +3,7 @@ with AUnit.Run;
 with AUnit.Test_Suites;
 
 with HMAC_SHA1_Streams_Tests;
+with HMAC_SHA2_Streams_Tests;
 
 procedure HMAC_Tests is
    function Suite return AUnit.Test_Suites.Access_Test_Suite;
@@ -16,6 +17,7 @@ procedure HMAC_Tests is
    function Suite return AUnit.Test_Suites.Access_Test_Suite is
    begin
       Test_Suite.Add_Test (HMAC_SHA1_Streams_Tests.Suite);
+      Test_Suite.Add_Test (HMAC_SHA2_Streams_Tests.Suite);
 
       return Test_Suite'Unchecked_Access;
    end Suite;
