@@ -17,6 +17,7 @@ package body HMAC_Generic is
    procedure Initialize (Ctx : out Context; Key : String) is
       Buffer : Element_Array (Index (Key'First) .. Index (Key'Last));
       for Buffer'Address use Key'Address;
+      pragma Import (Ada, Buffer);
    begin
       Initialize (Ctx, Buffer);
    end Initialize;
@@ -67,6 +68,7 @@ package body HMAC_Generic is
    procedure Update (Ctx : in out Context; Input : String) is
       Buffer : Element_Array (Index (Input'First) .. Index (Input'Last));
       for Buffer'Address use Input'Address;
+      pragma Import (Ada, Buffer);
    begin
       Update (Ctx, Buffer);
    end Update;
@@ -103,5 +105,4 @@ package body HMAC_Generic is
       Update (Ctx, Message);
       return Finalize (Ctx);
    end HMAC;
-
 end HMAC_Generic;
