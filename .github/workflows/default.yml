@@ -48,7 +48,7 @@ jobs:
       run: >
         alr clean &&
         alr build
-        -XHMAC_LIBRARY_TYPE=static
+        -XLIBRARY_TYPE=static
         -XHMAC_COMPILE_CHECKS=enabled
         -XHMAC_RUNTIME_CHECKS=enabled
         -XHMAC_STYLE_CHECKS=enabled
@@ -59,7 +59,7 @@ jobs:
       run: >
         alr clean &&
         alr build
-        -XHMAC_LIBRARY_TYPE=relocatable
+        -XLIBRARY_TYPE=relocatable
         -XHMAC_COMPILE_CHECKS=enabled
         -XHMAC_RUNTIME_CHECKS=enabled
         -XHMAC_STYLE_CHECKS=enabled
@@ -71,7 +71,7 @@ jobs:
         cd tests &&
         alr clean &&
         alr build
-        -XHMAC_LIBRARY_TYPE=static
+        -XLIBRARY_TYPE=static
         -XHMAC_COMPILE_CHECKS=enabled
         -XHMAC_RUNTIME_CHECKS=enabled
         -XHMAC_STYLE_CHECKS=enabled
