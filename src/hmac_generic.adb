@@ -78,17 +78,18 @@ package body HMAC_Generic is
       Hash_Update (Ctx.Inner, Input);
    end Update;
 
-   function Finalize (Ctx : in out Context) return Digest is
+   function Finalize (Ctx : Context) return Digest is
       Result : Digest;
    begin
       Finalize (Ctx, Result);
       return Result;
    end Finalize;
 
-   procedure Finalize (Ctx : in out Context; Output : out Digest) is
+   procedure Finalize (Ctx : Context; Output : out Digest) is
+      Ctx_Copy : Context := Ctx;
    begin
-      Hash_Update (Ctx.Outer, Hash_Finalize (Ctx.Inner));
-      Output := Hash_Finalize (Ctx.Outer);
+      Hash_Update (Ctx_Copy.Outer, Hash_Finalize (Ctx_Copy.Inner));
+      Output := Hash_Finalize (Ctx_Copy.Outer);
    end Finalize;
 
    function HMAC (Key : String; Message : String) return Digest is

@@ -10,5 +10,5 @@ maintainers = ["Anton Fediushin <imantonmeep@gmail.com>"]
 maintainers-logins = ["AntonMeep"]
 
 [[depends-on]]
-sha1 = "^1.0.0"
-sha2 = "^1.1.0"
+sha1 = "^2.0.0"
+sha2 = "^2.0.0"

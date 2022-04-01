@@ -10,8 +10,7 @@ generic
    with function Hash_Initialize return Hash_Context;
    with procedure Hash_Update
      (Ctx : in out Hash_Context; Input : Element_Array);
-   with function Hash_Finalize
-     (Ctx : in out Hash_Context) return Element_Array;
+   with function Hash_Finalize (Ctx : Hash_Context) return Element_Array;
 package HMAC_Generic with
    Pure,
    Preelaborate
@@ -33,8 +32,8 @@ is
    procedure Update (Ctx : in out Context; Input : String);
    procedure Update (Ctx : in out Context; Input : Element_Array);
 
-   function Finalize (Ctx : in out Context) return Digest;
-   procedure Finalize (Ctx : in out Context; Output : out Digest);
+   function Finalize (Ctx : Context) return Digest;
+   procedure Finalize (Ctx : Context; Output : out Digest);
 
    function HMAC (Key : String; Message : String) return Digest;
    function HMAC (Key : Element_Array; Message : Element_Array) return Digest;
