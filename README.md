@@ -2,6 +2,7 @@ hmac
 [![License](https://img.shields.io/github/license/AntonMeep/hmac.svg?color=blue)](https://github.com/AntonMeep/hmac/blob/master/LICENSE.txt)
 [![Alire crate](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/hmac.json)](https://alire.ada.dev/crates/hmac.html)
 [![GitHub release](https://img.shields.io/github/release/AntonMeep/hmac.svg)](https://github.com/AntonMeep/hmac/releases/latest)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/AntonMeep/hmac/Default)](https://github.com/AntonMeep/hmac/actions)
 =======
 
 HMAC implemented in Ada, no external dependencies. For the
